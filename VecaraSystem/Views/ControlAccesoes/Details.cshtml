@@ -1,0 +1,49 @@
+﻿@model VecaraSystem.Models.ControlAcceso
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ControlAcceso</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaEntrada)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaEntrada)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaSalida)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaSalida)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpleadoId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmpleadoId.Apellido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ParqueoId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ParqueoId.Disponibilidad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VehiculoId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VehiculoId.Anio)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
